@@ -36,14 +36,16 @@ Quiz_app_IL/
 ---
 
 
-## 🔑 4. Comptes de Test
+### 🔑 4. Comptes de test
+Ces comptes sont fournis à des fins d'évaluation uniquement. Merci de ne pas modifier les données critiques.
 
 | Rôle | Login | Mot de passe |
 | :--- | :--- | :--- |
-| **Administrateur** | `---` | `---` |
+| **Administrateur** | *Non public* | *Accès restreint* |
 | **Professeur** | `ibrahim` | `ibrahim123` |
 | **Étudiant** | `user` | `user123` |
 
+> **Note de sécurité :** Ces identifiants sont temporaires. Ils permettent de tester les différentes fonctionnalités du système. Merci de ne pas supprimer les données de démonstration.
 ---
 
 ## ✨ 5. Fonctionnalités Clés
