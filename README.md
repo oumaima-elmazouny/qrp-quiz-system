@@ -1,16 +1,17 @@
 # QRP - Système de Quiz Révision
 
 ## 📌 1. Description du Projet
-QRP est une application web de révision interactive. Elle permet de créer un environnement d'apprentissage où les étudiants peuvent tester leurs connaissances, voir leur progression et figurer dans un classement général.
+QRP (Quiz Revision Platform) est une application web Full-Stack interactive. Elle permet de créer un environnement d'apprentissage multi-rôles (Admin, Enseignant, Étudiant) où les utilisateurs peuvent tester leurs connaissances, suivre leur progression et figurer dans un classement général.
 
 ---
 
-## ⚙️ 2. Installation Technique
-* **Serveur local :** XAMPP, WAMP, Laragon (PHP 8.2+ recommandé)
-* **Base de données :** MySQL
+## ⚙️ 2. Installation Technique (Local & En Ligne)
+* **Serveur local :** XAMPP / WAMP (PHP 8.2+ recommandé)
+* **Base de données :** MySQL/ MariaDB
 * **Emplacement :** Dossier `Quiz_app_IL` dans votre répertoire `htdocs` ou équivalent
+* 🌐 **Lien du site en ligne :** quiz-oumaima-douae.infinityfreeapp.com
 
-### 🚀 Procédure d'installation
+### 🚀 Procédure d'installation locale
 1. Importez le fichier SQL fourni dans **phpMyAdmin**.
 2. Vérifiez les accès à la base de données dans le fichier `config.php` (*Host, DB Name, User, Pass*).
 3. Accédez à l'application via : `http://localhost/Quiz_app_IL/`
@@ -21,17 +22,16 @@ QRP est une application web de révision interactive. Elle permet de créer un e
 ```text
 Quiz_app_IL/
 │
-├── actions/      --> Scripts logiques de traitement (submit_quiz.php, etc.)
-├── includes/     --> Éléments de mise en page (header.php, navbar.php, footer.php)
-├── pages/        --> Pages de l'interface (dashbord.php, gerer_users.php, etc.)
-├── css/          --> Feuilles de style (Bootstrap, styles personnalisés)
-├── images/       --> Ressources graphiques et icônes du projet
-├── js/           --> Scripts clients (Animations, validation de formulaire)
-├── sessions/     --> Stockage local des fichiers de session (générés par le serveur)
-├── sql/          --> Script d'export de la base de données (quiz_revision_db.sql)
+├── actions/      --> Scripts de traitement logique (submit_quiz.php, etc.)
+├── includes/     --> Composants réutilisables (header.php, navbar.php, footer.php)
+├── pages/        --> Interface utilisateur (dashboard.php, gerer_users.php, etc.)
+├── css/          --> Feuilles de style (Bootstrap & styles personnalisés)
+├── images/       --> Ressources graphiques et icônes
+├── js/           --> Scripts clients (Timer, animations, validations)
+├── sql/          --> Script d'export final de la base de données
 │
-├── config.php    --> Configuration PDO et démarrage des sessions PHP
-└── index.php     --> Point d'entrée du projet (Page de connexion)
+├── config.php    --> Configuration PDO, BASE_URL et gestion des sessions
+└── index.php     --> Point d'entrée principal (Page de connexion)
 ```
 ---
 
@@ -41,29 +41,31 @@ Quiz_app_IL/
 | Rôle | Login | Mot de passe |
 | :--- | :--- | :--- |
 | **Administrateur** | `ENSIASD` | `ENSIASD2026` |
-| **Professeur** | `PROFESSEUR` | `123456` |
+| **Professeur** | `ibrahim` | `ibrahim123` |
 | **Étudiant** | `user` | `user123` |
 
 ---
 
 ## ✨ 5. Fonctionnalités Clés
-* **Gestion CRUD complète :** Contrôle total des utilisateurs par l'administrateur.
-* **Calcul de score dynamique :** Les points sont automatiquement convertis en note sur 20 selon le nombre total de questions.
-* **Classement en temps réel :** Seuls les étudiants ayant passé au moins un quiz apparaissent dans le Top 10.
-* **Sécurité & Rôles :** Redirection automatique et sécurisée si un utilisateur tente d'accéder à une page non autorisée par son rôle.
+* **Multi-accès :**  Interfaces dédiées et sécurisées pour l'Administrateur, le Professeur et l'Étudiant.
+* **Correction Automatique :** Calcul instantané des scores convertis sur 20 selon le nombre de questions.
+* **Dashboard Dynamique :**  Statistiques et gestion des ressources en temps réel.
+* **Classement  :** Leaderboard interactif affichant le Top 10 des meilleurs étudiants.
+* **Sécurité   :** Gestion stricte des accès par rôles et protection des sessions PHP.
+
 
 ---
 
 ## 🛠️ 6. Dépannage (FAQ)
 
-> 💡 **Erreur "Base table or view not found"**  
-> Vérifiez que vous avez bien importé toutes les tables requises (`users`, `quiz`, `questions`, `reponses`, `scores`).
-
 > 💡 **Erreur 404**  
-> Assurez-vous que les scripts de suppression et de modification sont bien présents à la racine ou dans le dossier spécifié.
+> Le fichier principal du tableau de bord a été renommé dashbord.php (sans "a"). Vérifiez bien l'orthographe dans vos liens et redirections PHP.
 
-> 💡 **Erreur Foreign Key (1452)**  
-> Si vous tentez d'importer manuellement des données dans la table `scores`, l'identifiant `id_user` doit obligatoirement exister au préalable dans la table `users`.
+> 💡 **Redirection en boucle sur la page Login**  
+> Si le login boucle sans vous connecter, assurez-vous qu'aucun espace ou retour à la ligne n'existe avant la fonction session_start() dans vos fichiers PHP.
+
+> 💡 **Base de données / Erreur d'intégrité (1451)**  
+> Pour vider la base ou réimporter proprement, désactivez temporairement la vérification des clés étrangères (Foreign Key Checks) dans phpMyAdmin lors de l'importation du fichier quiz_revision_db.sql.
 
 ---
-*Projet final réalisé en 2026 - QRP Quiz Revision*
+*Projet final réalisé en 2026 - QRP Quiz Revision Platform *
