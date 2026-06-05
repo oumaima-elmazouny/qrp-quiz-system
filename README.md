@@ -35,10 +35,6 @@ Quiz_app_IL/
 
 ---
 
-### 📋 PARTIE 2 : À coller juste à la suite (en dessous de la Partie 1)
-
-```markdown
----
 
 ## 🔑 4. Comptes de Test
 
