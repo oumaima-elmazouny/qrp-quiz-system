@@ -33,6 +33,13 @@ Quiz_app_IL/
 ├── config.php    --> Configuration PDO et démarrage des sessions PHP
 └── index.php     --> Point d'entrée du projet (Page de connexion)
 
+---
+
+### 📋 PARTIE 2 : À coller juste à la suite (en dessous de la Partie 1)
+
+```markdown
+---
+
 ## 🔑 4. Comptes de Test
 
 | Rôle | Login | Mot de passe |
@@ -40,6 +47,8 @@ Quiz_app_IL/
 | **Administrateur** | `ENSIASD` | `ENSIASD2026` |
 | **Professeur** | `PROFESSEUR` | `123456` |
 | **Étudiant** | `user` | `user123` |
+
+---
 
 ## ✨ 5. Fonctionnalités Clés
 * **Gestion CRUD complète :** Contrôle total des utilisateurs par l'administrateur.
