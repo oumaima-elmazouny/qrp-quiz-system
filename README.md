@@ -40,7 +40,7 @@ Quiz_app_IL/
 
 | Rôle | Login | Mot de passe |
 | :--- | :--- | :--- |
-| **Administrateur** | `ENSIASD` | `ENSIASD2026` |
+| **Administrateur** | `---` | `---` |
 | **Professeur** | `ibrahim` | `ibrahim123` |
 | **Étudiant** | `user` | `user123` |
 
