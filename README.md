@@ -34,9 +34,31 @@ Quiz_app_IL/
 └── index.php     --> Point d'entrée du projet (Page de connexion)
 
 ## 🔑 4. Comptes de Test
-```text
+
 | Rôle | Login | Mot de passe |
 | :--- | :--- | :--- |
 | **Administrateur** | `ENSIASD` | `ENSIASD2026` |
 | **Professeur** | `PROFESSEUR` | `123456` |
 | **Étudiant** | `user` | `user123` |
+
+## ✨ 5. Fonctionnalités Clés
+* **Gestion CRUD complète :** Contrôle total des utilisateurs par l'administrateur.
+* **Calcul de score dynamique :** Les points sont automatiquement convertis en note sur 20 selon le nombre total de questions.
+* **Classement en temps réel :** Seuls les étudiants ayant passé au moins un quiz apparaissent dans le Top 10.
+* **Sécurité & Rôles :** Redirection automatique et sécurisée si un utilisateur tente d'accéder à une page non autorisée par son rôle.
+
+---
+
+## 🛠️ 6. Dépannage (FAQ)
+
+> 💡 **Erreur "Base table or view not found"**  
+> Vérifiez que vous avez bien importé toutes les tables requises (`users`, `quiz`, `questions`, `reponses`, `scores`).
+
+> 💡 **Erreur 404**  
+> Assurez-vous que les scripts de suppression et de modification sont bien présents à la racine ou dans le dossier spécifié.
+
+> 💡 **Erreur Foreign Key (1452)**  
+> Si vous tentez d'importer manuellement des données dans la table `scores`, l'identifiant `id_user` doit obligatoirement exister au préalable dans la table `users`.
+
+---
+*Projet final réalisé en 2026 - QRP Quiz Revision*
