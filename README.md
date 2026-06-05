@@ -32,3 +32,11 @@ Quiz_app_IL/
 │
 ├── config.php    --> Configuration PDO et démarrage des sessions PHP
 └── index.php     --> Point d'entrée du projet (Page de connexion)
+
+## 🔑 4. Comptes de Test
+```text
+| Rôle | Login | Mot de passe |
+| :--- | :--- | :--- |
+| **Administrateur** | `ENSIASD` | `ENSIASD2026` |
+| **Professeur** | `PROFESSEUR` | `123456` |
+| **Étudiant** | `user` | `user123` |
