@@ -1,7 +1,7 @@
 # QRP Quiz - Système de Révision de Quiz
 
 ## 📌 Description
-QRP Quiz est une application web dynamique conçue pour aider les étudiants à réviser leurs cours de manière interactive à l'aide de quiz. Ce projet a été développé en binôme par **Oumaima Elmazouny** et **Douae Manar**.
+QRP Quiz est une application web dynamique conçue pour aider les étudiants à réviser leurs cours de manière interactive à l'aide de quiz. Ce projet a été développé en binôme par avec Douae Manar.
 
 ## 🛠️ Technologies utilisées
 * **Frontend :** HTML5, CSS3, JavaScript, Bootstrap
