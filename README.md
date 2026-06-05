@@ -1,21 +1,34 @@
-# QRP Quiz - Système de Révision de Quiz
+# QRP - Système de Quiz Révision
 
-## 📌 Description
-QRP Quiz est une application web dynamique conçue pour aider les étudiants à réviser leurs cours de manière interactive à l'aide de quiz. Ce projet a été développé en binôme par avec Douae Manar.
+## 📌 1. Description du Projet
+QRP est une application web de révision interactive. Elle permet de créer un environnement d'apprentissage où les étudiants peuvent tester leurs connaissances, voir leur progression et figurer dans un classement général.
 
-## 🛠️ Technologies utilisées
-* **Frontend :** HTML5, CSS3, JavaScript, Bootstrap
-* **Backend :** PHP
+---
+
+## ⚙️ 2. Installation Technique
+* **Serveur local :** XAMPP, WAMP, Laragon (PHP 8.2+ recommandé)
 * **Base de données :** MySQL
+* **Emplacement :** Dossier `Quiz_app_IL` dans votre répertoire `htdocs` ou équivalent
 
-## 🚀 Fonctionnalités
-* Inscription et connexion sécurisées des utilisateurs.
-* Création, modification et gestion de quiz interactifs.
-* Système de score en temps réel après chaque soumission.
-* Interface responsive adaptée aux ordinateurs et aux smartphones.
+### 🚀 Procédure d'installation
+1. Importez le fichier SQL fourni dans **phpMyAdmin**.
+2. Vérifiez les accès à la base de données dans le fichier `config.php` (*Host, DB Name, User, Pass*).
+3. Accédez à l'application via : `http://localhost/Quiz_app_IL/`
 
-## ⚙️ Installation & Utilisation
-1. Clonez ce dépôt ou téléchargez les fichiers.
-2. Importez le fichier de votre base de données dans votre serveur MySQL local (via XAMPP, WAMP ou Laragon).
-3. Configurez la connexion à la base de données dans vos fichiers PHP.
-4. Lancez votre serveur local et ouvrez le projet dans votre navigateur.
+---
+
+## 📂 3. Structure des Dossiers
+```text
+Quiz_app_IL/
+│
+├── actions/      --> Scripts logiques de traitement (submit_quiz.php, etc.)
+├── includes/     --> Éléments de mise en page (header.php, navbar.php, footer.php)
+├── pages/        --> Pages de l'interface (dashbord.php, gerer_users.php, etc.)
+├── css/          --> Feuilles de style (Bootstrap, styles personnalisés)
+├── images/       --> Ressources graphiques et icônes du projet
+├── js/           --> Scripts clients (Animations, validation de formulaire)
+├── sessions/     --> Stockage local des fichiers de session (générés par le serveur)
+├── sql/          --> Script d'export de la base de données (quiz_revision_db.sql)
+│
+├── config.php    --> Configuration PDO et démarrage des sessions PHP
+└── index.php     --> Point d'entrée du projet (Page de connexion)
