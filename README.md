@@ -9,7 +9,7 @@ QRP (Quiz Revision Platform) est une application web Full-Stack interactive. Ell
 * **Serveur local :** XAMPP / WAMP (PHP 8.2+ recommandé)
 * **Base de données :** MySQL/ MariaDB
 * **Emplacement :** Dossier `Quiz_app_IL` dans votre répertoire `htdocs` ou équivalent
-* 🌐 **Lien du site en ligne :** quiz-oumaima-douae.infinityfreeapp.com
+* 🌐 Lien du site en ligne : [quiz-oumaima-douae.infinityfreeapp.com]`
 
 ### 🚀 Procédure d'installation locale
 1. Importez le fichier SQL fourni dans **phpMyAdmin**.
