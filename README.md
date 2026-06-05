@@ -32,7 +32,7 @@ Quiz_app_IL/
 │
 ├── config.php    --> Configuration PDO et démarrage des sessions PHP
 └── index.php     --> Point d'entrée du projet (Page de connexion)
-
+```
 ---
 
 
